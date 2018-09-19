@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<meta name="keyword" content="">
+<meta name="description" content="">
+<meta name="author" content="lightuni.com">
+
+<title>康视百科</title>
+
+<link rel="stylesheet" href="../css/all.css">
+<script src="../js/all.js"></script>
+
+<!--[if lt IE 9]>
+<script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.min.js"></script>
+<script src="http://cdn.bootcss.com/respond.js/1.3.0/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+
+<div id="app">
+
+	<nav class="navbar navbar-default navbar-static-top">
+		<div class="container">
+
+			<!-- 导航 -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a href="../index" class="navbar-brand"><img src="../img/logo.jpg" height="38"></a>
+			</div>
+			<div id="navbar" class="navbar-collapse collapse">
+
+			<ul class="nav navbar-nav">
+
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">分类<span class="caret"></span></a>
+					<ul class="dropdown-menu">
+						<li><a href="#">母婴</a></li>
+						<li><a href="#">心脏</a></li>
+						<li><a href="#">肝脏</a></li>
+						<li><a href="#">消化</a></li>
+						<li><a href="#">母婴</a></li>
+						<li><a href="#">心脏</a></li>
+						<li><a href="#">肝脏</a></li>
+						<li><a href="#">消化</a></li>
+						<li><a href="#">母婴</a></li>
+						<li><a href="#">心脏</a></li>
+						<li><a href="#">肝脏</a></li>
+						<li><a href="#">消化</a></li>
+					</ul>
+				</li>
+				<li class="w20"></li>
+
+			</ul>
+
+
+			<!-- 用户 -->
+			<ul class="nav navbar-nav navbar-right">
+
+	<!-- 			<li>
+					<a href="/account">注册/登录</a>
+				</li> -->
+
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">董文教授<span class="caret"></span></a>
+					<ul class="dropdown-menu">
+						<li><a href="#">帐户设置</a></li>
+						<li><a href="#">我的收藏</a></li>
+						<li><a href="#">...</a></li>
+						<li><a href="#">退出登录</a></li>
+					</ul>
+				</li>
+
+			</ul>
+
+			<!-- 搜索 -->
+			<form id="top_search" action="" method="get" class="navbar-form">
+				<div class="form-group">
+					<div class="input-group">
+						<input name="kw" value="鼻炎"
+						class="form-control">
+						<div class="input-group-addon">
+							<a href="javascript:$('#top_search').submit();"><i class="icon-search"></i></a>
+						</div>
+					</div>
+				</div>
+			</form>
+
+		</div>
+	</nav>
+
+<div class="container mt30">
+
+	<div class="row">
+
+		<div class="col-sm-8">
+			<video width="100%"  controls="controls" class="mb10 bg000">
+				<source src="../public/tmp/video/v.mp4" type="video/mp4">
+				Your browser does not support the video tag.
+			</video>
+
+			<div class="under">
+				<div class="f20">糖尿病患者如何补充无机盐和维生素</div>
+				<div class="lgray">
+					<i class="icon-tag"></i>
+					糖尿病 / 无机盐
+				</div>
+				<div class="mt10">
+					<div class="fl"><img src="../public/tmp/doctor/1.jpg" width="50"></div>
+					<div class="pt5 ml60">
+						<span class="f16">蔡晓东</span> 主任医师<br>
+						南方医科大学南方医院<br>
+					</div>
+					
+					<div class="c"></div>
+					<hr class="mt10 mb10">
+
+					<div class="fr">
+						<i class=" icon-eye-open"></i> 阅读
+						<span class="f10">(56,458)</span>　　
+
+						<a href="#">
+							<i class="icon-thumbs-up"></i> 赞
+							<span class="f10">(56,458)</span>　
+						</a>
+					</div>
+
+					<a href="#">
+						<i class="icon-plus"></i> 关注
+						<span class="f10">(56,458)</span>
+					</a>　　
+
+					<a href="#">
+						<i class="icon-star"></i> 收藏
+						<span class="f10">(56,458)</span>
+					</a>
+
+				</div>
+			</div>
+
+			<div class="under">
+				<div class="h40 f16">评论</div>
+
+				<div class="row">
+					<div class="col-xs-2">
+						<img src="../public/tmp/doctor/1.jpg" width="100%">
+					</div>
+					<div class="col-xs-10 pl0">
+						<form id="comm-form" action="comm_save" method="post">
+							<textarea id="comment" name="title" placeholder="评论需审核才会显示" class="w100pc h80 mb8"></textarea>
+							<input name="fid" value="{$a.id}" type="hidden">
+							<button class="btn btn-sm btn-danger">发表评论</button>
+						</form>
+					</div>
+				</div>
+
+				<hr class="mt20 mb20">
+
+
+		<div class="">
+			<?php for($i=0; $i<5; $i++):?>
+			<div id="comm_{$v.id}" class="row">
+				<div class="col-xs-2">
+					<a href="#"><img src="../public/tmp/doctor/1.jpg" width="100%"></a>
+				</div>
+				<div class="col-xs-10 pl0">
+
+					<div class="fr">
+
+
+
+					</div>
+
+
+					张天乐 <span class="f10 lgray">1天前</span><br>
+					<div class="mt10 f14 ld">
+						和日本各类繁多的驾驶员身份识别标志相比，我国的法律只规定了“实习”这一种标志。但随着社会的发展高龄驾驶员也将会越来越多，同时在确保安全驾驶的前提下有各类身体障碍的人士也理应能享受驾驶的便利和乐趣。悬挂驾驶员身份识别标志，让更多人能驾驶汽车，同时也方便周边车辆可以及时发现并给予特殊驾驶者更多关照。但各国的文化与生活方式也存在差异，对于日本的这种制度广大车友怎么看？欢迎留言讨论。
+					</div>
+				</div>
+
+			</div>
+			<div class="mt15 mb20 dotline"></div>
+			<?php endfor; ?>
+		</div>
+
+
+<nav>
+  <ul class="pagination">
+    <li>
+      <a href="#" aria-label="Previous">
+        <span aria-hidden="true">&laquo;</span>
+      </a>
+    </li>
+    <li><a href="#">1</a></li>
+    <li><a href="#">2</a></li>
+    <li><a href="#">3</a></li>
+    <li><a href="#">4</a></li>
+    <li><a href="#">5</a></li>
+    <li>
+      <a href="#" aria-label="Next">
+        <span aria-hidden="true">&raquo;</span>
+      </a>
+    </li>
+  </ul>
+</nav>
+
+
+			</div>
+		</div>
+
+		<div class="col-sm-4 sm-pl0">
+			<div class="under">
+
+				<?php for($i=0; $i<10; $i++):?>
+				<div class="row mb10">
+					<div class="col-xs-5 col-sm-12 col-md-5 not-sm-pr0">
+						<a href="v.php?id=<?=$i?>">
+							<img src="../public/tmp/video/<?=$i%3?>.jpg" width="100%">
+						</a>
+					</div>
+
+					<div class="col-xs-7 col-sm-12 col-md-7">
+						<div class="mb3 f14 b">如何有效预防盆腔炎</div>
+						<div class="f11">
+						南方医科大学南方医院<br>
+						李莉艳</div>
+					</div>
+				</div>
+				<?php endfor;?>
+
+				<hr>
+
+				<div class="mt10 tc"><a href="#">更多健康视频</a></div>
+
+			</div>
+		</div>
+
+	</div>
+
+</div><!--container-->
+
+
+	<div class="foot"> 
+		<div class="container pt30">
+
+			<div class="row">
+				<div class="col-sm-8 mb20 ld">
+					<img src="../img/logo-foot.png" height="35" class="mb10"><br>
+					“康视百科”是由深圳市康视百科健康科技有限公司、CUTV、深圳市健康教育促进中心、广东省医院协会健康管理专业委员会等政府卫生机构共同打造的健康宣教公益平台。通过视频介绍全国各大医院的重点科室、知名医生及健康医疗科普、急救、术前术后注意事项、术后康复知识等，帮助群众建立科学的健康管理观念，引导群众针对健康问题采取积极理性的应对措施，正确就医，让各方在和谐社会生活中受益。
+				</div>
+				<div class="col-sm-2 col-sm-offset-2 mb20 tc">
+					<img src="../img/qr.jpg" class="w100pc mb5"><br>
+					康视百科微信公众号
+				</div>
+			</div>
+
+		</div><!--container-->
+
+		<hr>
+
+		<div class="container lh40 pb10">
+			<div class="row">
+				<div class="col-sm-6">
+					Copyright &copy; 2015 kswiki.com 粤ICP备15058769号-1
+				</div>
+				<div class="col-sm-6 foot-right">
+					<a href="#">关于康视</a> |
+					<a href="#">商务合作</a> |
+					<a href="#">联系我们</a>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+</div>
+
+<script>
+var app = new Vue({
+  el: '#app',
+  data: {
+
+  },
+  methods: {
+
+  },
+  mounted() {
+
+  }
+})
+</script>
+</body>
+</html>
